@@ -39,8 +39,11 @@ public class RecyclerViewFragment extends Fragment {
         // Don't forget to set the manager on your RecyclerView!
         recyclerContacts.setLayoutManager(layoutManager);
 
+        // create data
         List<Contact> contacts = mockContacts();
 
+        // set the adapter
+        recyclerContacts.setAdapter(new ContactAdapter(contacts));
     }
 
     private List<Contact> mockContacts() {
